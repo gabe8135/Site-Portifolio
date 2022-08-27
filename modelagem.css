@@ -1,0 +1,291 @@
+*{
+    margin:0; /*margem 0*/
+    padding:0; /*para o rosto*/
+}
+
+header {
+    display:block; /*para o rosto*/
+    width: 100%; /*tamanho da div*/
+    height: 100px; /*tamanho da div*/
+    background-color: rgba(48, 48, 48, 0.35); /*cor de fundo*/
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); /*sombra*/
+    backdrop-filter: blur(13.5px); /*efeito de blur*/
+    -webkit-backdrop-filter: blur(13.5px); /*efeito de blur*/
+    border-radius: 10px; /*borda redonda*/
+    
+    position: fixed; /*posicionamento*/
+    top: 0; /*posicionamento*/
+}
+
+.container-principal{
+    height: 100%; /*altura total do site*/ 
+    font-family: 'Verdana'; /*fonte*/
+    color: rgb(255, 255, 255); /*cor*/
+    scroll-behavior: smooth; /*para o scroll funcionar*/
+}
+
+/*posicionamento do logo gabriel*/
+
+.logo {
+    position: absolute; /*posicionamento*/
+    width: 300px; /*largura*/
+    height: auto; /*altura*/
+}
+
+.logo img {
+    width: 110%; /*largura*/
+    margin-left: 20%; /*margem*/
+    margin-top: 8%; /*margem*/
+}
+
+/*personalizando os botoes de navegação projetos sobre e contato*/
+
+nav {
+    position: absolute; /*posição*/
+    right: 30px; /*a direita*/
+    bottom: 0px; /*abaixo*/
+}
+
+nav ul li{
+    float: left; /*separa os elementos*/
+    width: auto; /*tamanho*/
+    margin: 0.8em; /*margem*/
+    font-size: 1.5em; /*tamanho da fonte*/
+    font-family: 'verdana'; /*fonte*/
+    list-style: none; /*remove a lista*/
+}
+
+nav ul li a {
+    text-decoration: none; /*remove o underline*/
+    color: rgb(255, 255, 255); /*cor*/
+}
+
+nav ul li a:hover {
+    color: #0071bc; /*cor do link quando o mouse estiver sobre ele*/
+}
+
+body {
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); /*cor de fundo*/
+    height: 1000%; /*altura total do site*/
+    overflow: auto; /*para o scroll funcionar*/
+    display: flex; /*flexibilidade*/
+    font-family: "Anton", sans-serif; /*fonte*/
+    justify-content: auto; /*alinhamento horizontal*/
+    align-items: auto; /*alinhamento vertical*/
+}
+
+html {
+    scroll-behavior: smooth; /*para o scroll funcionar*/
+}
+
+/*programação do rosto*/
+
+.rosto img{
+    float: right; /*posição*/
+    width: 15%; /*largura*/
+    border: none; /*remove a borda*/
+    padding: 5px; /*padding*/
+    margin: 5px 10px 0px 0px; /*margem*/
+   }
+  
+   @-webkit-keyframes rosto {
+    from {-webkit-transform: rotate(4deg)}
+    to   {-webkit-transform: rotate(-4deg)}
+  }
+  
+  @keyframes rosto {
+    from {transform: rotate(4deg)}
+    to   {transform: rotate(-4deg)}
+  }
+
+ /* $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 40) { // 140 é a distancia que vc rola antes da logo sumir
+      $("#rosto").fadeOut();
+    } else {
+      $("#mao").fadeIn();
+    }
+  }); */
+  
+  #rosto {
+    -webkit-animation: rosto 2s alternate infinite ease-in-out;
+            animation: rosto 2s alternate infinite ease-in-out;
+  }
+  
+  /*programação do mao*/
+  
+  .mao img{
+    
+    float: right; /*posição*/
+    width: 15%; /*largura*/
+    /*border: none; /*remove a borda*/
+    /*padding: 5px; /*padding*/
+    margin: 100px -10px 0px 0px; /*margem*/
+   }
+  
+   @-webkit-keyframes mao {
+    from {-webkit-transform: rotate(-4deg)}
+    to   {-webkit-transform: rotate(4deg)}
+  }
+  
+  @keyframes mao {
+    from {transform: rotate(-4deg)}
+    to   {transform: rotate(4deg)}
+  }
+
+  #mao {
+    -webkit-animation: mao 2s alternate infinite ease-in-out;
+            animation: mao 2s alternate infinite ease-in-out;
+  }
+
+
+#container-sobre{
+    width: 85%; /*tamanho da div*/
+    margin-top: 10%; /*posicionamento*/
+    margin-left: 5%; /*posicionamento*/
+    height: 100%; /*tamanho da div*/
+    /*position: relative; posicionamento*/
+}
+
+#txt-sobre{
+    width: 70%; /*tamanho da div*/
+    float: left,top; /*alinhamento*/
+    /*position: relative; /*posicionamento*/  
+}
+
+#txt-sobre p{
+    width: 50%; /*tamanho da div*/
+    position: left; /*posicionamento*/
+    float: left; /*alinhamento*/
+    color: #fff; /*cor*/
+}
+
+#txt-sobre dl{
+    width: 50%; /*tamanho da div*/
+    color: #fff; /*cor*/
+}
+
+/*parte dos projetos*/
+
+/*posicionamento dar imagens*/
+
+#projetos-code {
+    width: 75%; /*tamanho da div*/
+    /*position: relative; /*posicionamento*/
+    float: left; /*alinhamento*/
+}
+
+/*arte de fundo da imagem*/
+
+#projetos-code .config-projetos{
+    width: 50%; /*tamanho da div*/
+    margin-left: 7%; /*posicionamento*/
+    margin-top: 10%; /*posicionamento*/
+    background-color: rgba(48, 48, 48, 0.35); /*cor de fundo*/
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+}
+
+#projetos-code .config-projetos img{
+    width: 80%; /*tamanho da div*/
+    padding: 1%; /*para o rosto*/  
+}
+
+/*formulario para entrar em contato*/
+
+#txt-contato {
+    width: 213px; /*tamanho da div*/
+    height: 100%; /*tamanho da div*/
+    /*position: relative; /*posicionamento*/
+    text-align: center; /*alinhamento*/
+    margin-top: 125%; /*posicionamento*/
+    margin-bottom: 2%; /*posicionamento*/
+    margin-left: auto; /*posicionamento*/
+    margin-right: auto; /*posicionamento*/
+}
+
+#txt-contato p{
+    width: 100%; /*tamanho da div*/
+    height: 100%; /*tamanho da div*/
+    color: #fff; /*cor*/
+    font-size: 1em; /*tamanho da fonte*/
+    font-family: 'verdana'; /*fonte*/
+    text-align: justify; /*alinhamento*/
+    margin-bottom: 3%; /*posicionamento*/
+    margin-left: 3%; /*posicionamento*/
+    margin-right: 3%; /*posicionamento*/
+}
+
+#txt-contato h1{
+    margin-bottom: 2%; /*posicionamento*/
+    text-align: center; /*alinhamento*/
+}
+
+/*modelagem dos demais campos de preencrimento e do botao enviar*/
+#txt-contato input{
+    width: 100%; /*tamanho da div*/
+    height: 100%; /*tamanho da div*/
+    border: none; /*remove a borda*/
+    border-bottom: 1px solid #fff; /*borda*/
+    border-radius: 10px; /*borda*/
+    color: #0071bc; /*cor*/
+    font-size: 1.5em; /*tamanho da fonte*/
+    font-family: 'verdana'; /*fonte*/
+    padding: 5px; /*padding*/
+    margin-top: 5px; /*margem*/
+    margin-bottom: 5px; /*margem*/
+}
+
+/*modelagem da area de preenchimento (mensagem)*/
+#txt-contato textarea{
+    width: 100%; /*tamanho da div*/
+    height: 100%; /*tamanho da div*/
+    border: none; /*remove a borda*/
+    border-bottom: 1px solid #fff; /*borda*/
+    border-radius: 10px; /*borda*/
+    color: #0071bc; /*cor*/
+    font-size: 1.5em; /*tamanho da fonte*/
+    font-family: 'verdana'; /*fonte*/
+    padding: 5px; /*padding*/
+    margin-top: 5px; /*margem*/
+    margin-bottom: 5px; /*margem*/
+}
+
+#txt-contato button{
+    width: 100%; /*tamanho da div*/
+    height: 100%; /*tamanho da div*/
+    border: none; /*remove a borda*/
+    border-radius: 10px; /*borda*/
+    background-color: #4d4d4d5e; /*cor de fundo*/
+    color: #ffffff; /*cor*/
+    font-size: 1.5em; /*tamanho da fonte*/
+    font-family: 'verdana'; /*fonte*/
+    padding: 5px; /*padding*/
+    margin-top: 5px; /*margem*/
+    margin-bottom: 5px; /*margem*/
+}
+
+#txt-contato button:hover{
+    background-color: #0071bc7c; /*cor de fundo*/
+    color: #ffffff; /*cor*/
+}
+
+
+/*ajustes do rodapé footer*/
+
+footer {
+    position: relative; /*posicionamento*/
+    bottom: 0; /*posicionamento*/
+    width: 100%; /*tamanho da div*/
+    height: 100px; /*tamanho da div*/
+    background-color: rgb(0, 0, 0); /*cor de fundo*/
+    text-align: center; /*alinhamento*/
+    line-height: 100px; /*alinhamento*/
+}
+
+/*personalizando o link do rodapé*/
+
+a {
+    text-decoration: none; /*remove o underline*/
+    color: #fff; /*cor de fundo*/
+}
+
